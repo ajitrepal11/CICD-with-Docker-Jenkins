@@ -7,7 +7,7 @@ pipeline {
                 git branch: 'master', url: ' https://github.com/ajitrepal11/CICD-with-Docker-Jenkins.git'
             }
         }
-       stage('Getting the confirmation') {
+       stage('Getting confirmation') {
             steps {
                input message: 'Shall we proceed to create docker image ?', parameters: [booleanParam(description: 'Click \'Yes\' if you want proceed', name: 'Yes'), booleanParam(description: 'Click \'No\' if you want abort', name: 'No')]
             }
